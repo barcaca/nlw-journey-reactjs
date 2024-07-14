@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
 
+import { Footer } from '@/app/_components/footer'
 import { Provider } from '@/app/provider'
 import { poppins, raleway } from '@/fonts/fonts'
 
@@ -20,8 +21,11 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${raleway.variable} h-full`}
     >
-      <body>
-        <Provider>{children}</Provider>
+      <body className="flex h-full w-full flex-col bg-background antialiased">
+        <Provider>
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   )

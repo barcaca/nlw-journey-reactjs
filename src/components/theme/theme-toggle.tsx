@@ -64,7 +64,7 @@ export function ThemeToggle() {
             size="icon"
             onClick={() => setTheme(item.value)}
             aria-label="Toggle theme"
-            className={`${theme === item.value ? 'border-primary border-2' : ''} rounded-full`}
+            className={`${theme === item.value ? 'border-2 border-primary' : ''} rounded-full`}
           >
             {item.icon}
           </Button>
